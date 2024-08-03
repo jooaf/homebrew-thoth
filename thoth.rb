@@ -1,16 +1,15 @@
 class Thoth < Formula
-  desc "A terminal scratchpad app inspired by Heynote"
+  desc "Description of your Thoth project"
   homepage "https://github.com/jooaf/thoth"
-  url "https://github.com/jooaf/thoth/archive/v0.1.0.tar.gz"
+  url "https://github.com/jooaf/thoth/releases/download/v0.1.43/thoth_0.1.43_darwin_amd64.tar.gz"
+  sha256 ""
   license "MIT"
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "thoth"
   end
 
   test do
-    assert_match "thoth version 0.1.0", shell_output("#{bin}/thoth --version")
+    assert_match "thoth version 0.1.43", shell_output("#{bin}/thoth --version")
   end
 end
