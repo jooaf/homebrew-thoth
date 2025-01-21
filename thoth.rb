@@ -1,15 +1,15 @@
 class Thoth < Formula
   desc "A terminal scratchpad akin to Heynote"
   homepage "https://github.com/jooaf/thoth"
-  version "0.1.72"
+  version "0.1.74"
   
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jooaf/thoth/releases/download/v#{version}/thoth_#{version}_darwin_amd64.tar.gz"
-      sha256 "f6a6c8bc67b47215ab147fd4069dd80dda919cfed8e0b2fb3e4e7bc630c1e3e3"
+      sha256 "c17b57e59451b787c6685d69524a4cea63c650501aa88be1532d152f7286d2dd"
     else
       url "https://github.com/jooaf/thoth/releases/download/v#{version}/thoth_#{version}_darwin_arm64.tar.gz"
-      sha256 "2efd4567cc44b169fc873c74ccc8236d855c1bdd92975ee185e4eca82a876d5b"
+      sha256 "7632d622b585a603d3164634b659c12ceb52719ccca63c998066fee7b230ea29"
     end
   end
 
